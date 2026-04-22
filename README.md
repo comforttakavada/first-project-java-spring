@@ -5,6 +5,7 @@ PROJECT OVERVIEW:
 This project demonstrates the basics of building a web application using Spring Boot. It includes a simple controller that handles HTTP GET requests and renders dynamic HTML pages using the Thymeleaf templating engine.
 
 PROJECT STRUCTURE:
+
 first-project-java-spring/
 
 ├── src/
@@ -47,9 +48,11 @@ bash mvn spring-boot:run
 
 Open your browser and navigate to:
 http://localhost:8080/
+
 <img width="960" height="535" alt="Screenshot 2026-04-22 231249" src="https://github.com/user-attachments/assets/c4650584-6bee-4aa3-9d88-f084eacb65d6" />
 
 Endpoints:
+
 MethodURLDescriptionGET/Returns a plain text hello messageGET/greetingRenders a greeting page with an optional name parameter
 
 EXAMPLE USAGE:
@@ -68,6 +71,7 @@ Displays: Hello, Vistula!
 
 
 TECHNOLOGIES USED:
+
 Java: Core programming language
 
 Spring Boot : Application framework
@@ -79,6 +83,7 @@ Thymeleaf : Server-side HTML templating engine
 Maven : Build and dependency management
 
 KEY FILES:
+
 FirstProjectJavaSpringApplication.java
 
 The main entry point of the application. Uses the @SpringBootApplication annotation to enable auto-configuration and
