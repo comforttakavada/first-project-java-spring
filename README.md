@@ -26,7 +26,6 @@ Import: Ensure the project is imported into your IDE as a Maven project.
 Dependencies: If the IDE shows errors, right-click the project, select Maven, and then Reload project.
 Execute: Run the main application class.
 Access:
-http://localhost:8080/` for the root message.
 http://localhost:8080/greeting?name=Vistula` to see the rendered HTML template with the Vistula logo.
  Project Structure
 src/main/java/`: Contains the HelloController.
