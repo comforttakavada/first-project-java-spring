@@ -8,25 +8,38 @@ PROJECT STRUCTURE:
 first-project-java-spring/
 
 ├── src/
+
 | └── main/
+
 | ├── java/
+
 | └── pl/edu/vistula/first_project_java_spring/
+
 │ ├── FirstProjectJavaSpringApplication.java
+
 │ └── controller/
+
 │ └── HelloController.java
+
 │ └── resources/
+
 │ └── templates/
+
 │ └── greeting.html
+
 └── README.md
 
 PREREQUISITES:
 Java 25
+
 Maven
+
 An IDE used is IntelliJ IDEA
 
 RUNNING THE APPLICATION
 Clone the repository:
 bash git clone
+
 cd first-project-java-spring
 
 Build and run using Maven:
@@ -34,13 +47,12 @@ bash mvn spring-boot:run
 
 Open your browser and navigate to:
 http://localhost:8080/
+<img width="960" height="535" alt="Screenshot 2026-04-22 231249" src="https://github.com/user-attachments/assets/c4650584-6bee-4aa3-9d88-f084eacb65d6" />
 
-<img width="960" height="535" alt="Screenshot 2026-04-22 231249" src="https://github.com/user-attachments/assets/69d1dc85-467c-419e-a25d-a2f280d69695" />
-
-Endpoints
+Endpoints:
 MethodURLDescriptionGET/Returns a plain text hello messageGET/greetingRenders a greeting page with an optional name parameter
 
-EXAMPLE USAGE
+EXAMPLE USAGE:
 Default greeting:
 
 http://localhost:8080/greeting
@@ -52,22 +64,35 @@ Custom greeting:
 http://localhost:8080/greeting?name=Vistula
 
 Displays: Hello, Vistula!
-<img width="955" height="524" alt="Screenshot 2026-04-22 225719" src="https://github.com/user-attachments/assets/7f1a99d5-eb2e-4180-9baa-1151ad9a1ca3" />
+<img width="955" height="524" alt="Screenshot 2026-04-22 225719" src="https://github.com/user-attachments/assets/3bfd2f60-ca18-4df4-ba16-c07b50666950" />
 
-TECHNOLOGIES USED
+
+TECHNOLOGIES USED:
 Java: Core programming language
+
 Spring Boot : Application framework
+
 Spring MVC : Web layer / controller handling
+
 Thymeleaf : Server-side HTML templating engine
+
 Maven : Build and dependency management
 
 KEY FILES:
 FirstProjectJavaSpringApplication.java
+
 The main entry point of the application. Uses the @SpringBootApplication annotation to enable auto-configuration and
+
 component scanning, then launches the embedded web server via SpringApplication.run().
+
 HelloController.java
+
 A Spring MVC controller (@Controller) that handles two routes:
+
 returns: a plain text greeting string.
+
 greeting : accepts an optional name query parameter (defaults to "World"), adds it to the model, and renders the greeting.html template.
+
 greeting.html
+
 A Thymeleaf template that dynamically displays the greeting message using the name attribute passed from the controller. Also displays the Vistula University logo.
