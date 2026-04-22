@@ -1,33 +1,96 @@
-This project is a Spring Boot, It demonstrates the basics of web development using the Spring Framework, specifically the MVC (Model-View-Controller)
+JAVA SPRING PROJECT:
+FIRST PROJECT JAVA SPRING A beginner Spring Boot web application built with Java and Thymeleaf, developed as part of coursework at Vistula University.
 
-Project Configuration
-This project uses:
-Build Tool: Maven
-Language:Java
-Framework:Spring Boot
+PROJECT OVERVIEW
+This project demonstrates the basics of building a web application using Spring Boot. It includes a simple controller that handles HTTP GET requests and renders dynamic HTML pages using the Thymeleaf templating engine.
 
+PROJECT STRUCTURE
+first-project-java-spring/
 
-Features
+├── src/
 
-Controller Functionality (`HelloController.java`)
-The application includes a controller that handles three types of HTTP requests:
+| └── main/
 
-GET /`**: Returns a raw text response: `"Hello Vistula, in my first Spring controller."`
-GET /hello: Returns a raw text response: `"Hello from Spring!"`
-GET /greeting: Uses an MVC approach. It accepts an optional `name` parameter (default: "World"), binds it to the model, and renders the `greeting.html` template.
+| ├── java/
 
- 2. View Layer (`greeting.html`)
-The view layer utilizes Thymeleaf for dynamic content rendering:
-Dynamic Greeting: Displays a personalized message based on the URL parameter (`/greeting?name=YourName`).
-Static Content: Includes a placeholder image (`vistula.png`) sourced from the `src/main/resources/static` directory.
+| └── pl/edu/vistula/first_project_java_spring/
 
-How to Run
-Import: Ensure the project is imported into your IDE as a Maven project.
-Dependencies: If the IDE shows errors, right-click the project, select Maven, and then Reload project.
-Execute: Run the main application class.
-Access:
-http://localhost:8080/greeting?name=Vistula` to see the rendered HTML template with the Vistula logo.
- Project Structure
-src/main/java/`: Contains the HelloController.
-src/main/resources/templates/`: Contains greeting.html (Thymeleaf template).
-src/main/resources/static/`: contain vistula.png .
+│ ├── FirstProjectJavaSpringApplication.java
+
+│ └── controller/
+
+│ └── HelloController.java
+
+│ └── resources/
+
+│ └── templates/
+
+│ └── greeting.html
+
+└── README.md
+
+PREREQUISITES
+Java 25
+
+Maven
+
+An IDE used is IntelliJ IDEA
+
+RUNNING THE APPLICATION
+Clone the repository:
+bash git clone
+
+cd first-project-java-spring
+
+Build and run using Maven:
+bash mvn spring-boot:run
+
+Open your browser and navigate to:
+http://localhost:8080/
+
+Endpoints
+MethodURLDescriptionGET/Returns a plain text hello messageGET/greetingRenders a greeting page with an optional name parameter
+
+EXAMPLE USAGE
+Default greeting:
+
+http://localhost:8080/greeting
+
+Displays: Hello, World!
+
+Custom greeting:
+
+http://localhost:8080/greeting?name=Vistula
+
+Displays: Hello, Vistula!
+<img width="955" height="524" alt="Screenshot 2026-04-22 225719" src="https://github.com/user-attachments/assets/7f1a99d5-eb2e-4180-9baa-1151ad9a1ca3" />
+
+TECHNOLOGIES USED
+Java: Core programming language
+
+Spring Boot : Application framework
+
+Spring MVC : Web layer / controller handling
+
+Thymeleaf : Server-side HTML templating engine
+
+Maven : Build and dependency management
+
+KEY FILES:
+FirstProjectJavaSpringApplication.java
+
+The main entry point of the application. Uses the @SpringBootApplication annotation to enable auto-configuration and
+
+component scanning, then launches the embedded web server via SpringApplication.run().
+
+HelloController.java
+
+A Spring MVC controller (@Controller) that handles two routes:
+
+returns: a plain text greeting string.
+
+greeting : accepts an optional name query parameter (defaults to "World"), adds it to the model, and renders the greeting.html template.
+
+greeting.html
+
+A Thymeleaf template that dynamically displays the greeting message using the name attribute passed from the controller. Also displays the Vistula University logo.
